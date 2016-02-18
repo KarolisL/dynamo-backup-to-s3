@@ -50,8 +50,8 @@ var dynamoBackup = new DynamoBackup({
 });
 
 dynamoBackup.on('error', function(data) {
-    console.log('Error backing up ' + data.tableName);
-    console.log(data.error);
+    console.log('Error backing up ' + data.table);
+    console.log(data.err);
     if (program.stopOnFailure) {
         process.exit(-1);
     }
